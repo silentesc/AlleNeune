@@ -5,8 +5,47 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AlleNeune"
         mc:Ignorable="d"
-        Title="Alle Neune" Height="450" Width="450">
-    <Grid>
+        Title="Alle Neune" Height="450" Width="450" ResizeMode="CanMinimize">
+    <Grid ShowGridLines="True">
+        <!--Define Columns and Rows-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
         
+        <!--Buttons (design in App.xaml)-->
+        <Button x:Name="button1"
+                Grid.Column="0"
+                Grid.Row="0"/>
+        <Button x:Name="button2"
+                Grid.Column="1"
+                Grid.Row="0"/>
+        <Button x:Name="button3"
+                Grid.Column="2"
+                Grid.Row="0"/>
+        <Button x:Name="button4"
+                Grid.Column="0"
+                Grid.Row="1"/>
+        <Button x:Name="button5"
+                Grid.Column="1"
+                Grid.Row="1"/>
+        <Button x:Name="button6"
+                Grid.Column="2"
+                Grid.Row="1"/>
+        <Button x:Name="button7"
+                Grid.Column="0"
+                Grid.Row="2"/>
+        <Button x:Name="button8"
+                Grid.Column="1"
+                Grid.Row="2"/>
+        <Button x:Name="button9"
+                Grid.Column="2"
+                Grid.Row="2"/>
     </Grid>
 </Window>
