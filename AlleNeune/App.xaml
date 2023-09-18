@@ -4,6 +4,18 @@
              xmlns:local="clr-namespace:AlleNeune"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <!--Edit button stuff here-->
+                        <Border Width="100"
+                                Height="100"
+                                Background="SlateGray"
+                                CornerRadius="100"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Application.Resources>
 </Application>
