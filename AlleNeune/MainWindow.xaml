@@ -5,24 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AlleNeune"
         mc:Ignorable="d"
-        Title="Alle Neune" Height="525" Width="450" ResizeMode="CanMinimize">
-    <Window.Resources>
-        <!--Ingame buttons-->
-        <Style TargetType="Button" x:Key="IngameButton">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border Width="100"
-                                Height="100"
-                                Background="SlateGray"
-                                CornerRadius="100"/>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-    </Window.Resources>
+        Background="DimGray"
+        Title="Alle Neune" Height="735" Width="650" ResizeMode="CanMinimize">
     <StackPanel>
-        <Grid Height="450">
+        <Grid Height="650">
             <!--Define Columns and Rows-->
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -74,56 +60,85 @@
                     Grid.Row="2"/>
 
             <!--Buttons (design in App.xaml)-->
-            <Button x:Name="button1"
-                    Style="{StaticResource IngameButton}"
+            <Button x:Name="b1"
+                    Width="150"
+                    Height="150"
+                    Background="LightBlue"
+                    BorderThickness="0"
                     Grid.Column="0"
                     Grid.Row="0"
                     Click="ButtonClickEvent"/>
-            <Button x:Name="button2"
-                    Style="{StaticResource IngameButton}"
+            <Button x:Name="b2"
+                    Width="150"
+                    Height="150"
+                    Background="LightBlue"
+                    BorderThickness="0"
                     Grid.Column="1"
                     Grid.Row="0"
                     Click="ButtonClickEvent"/>
-            <Button x:Name="button3"
-                    Style="{StaticResource IngameButton}"
+            <Button x:Name="b3"
+                    Width="150"
+                    Height="150"
+                    Background="LightBlue"
+                    BorderThickness="0"
                     Grid.Column="2"
                     Grid.Row="0"
                     Click="ButtonClickEvent"/>
-            <Button x:Name="button4"
-                    Style="{StaticResource IngameButton}"
+            <Button x:Name="b4"
+                    Width="150"
+                    Height="150"
+                    Background="LightBlue"
+                    BorderThickness="0"
                     Grid.Column="0"
                     Grid.Row="1"
                     Click="ButtonClickEvent"/>
-            <Button x:Name="button5"
-                    Style="{StaticResource IngameButton}"
+            <Button x:Name="b5"
+                    Width="150"
+                    Height="150"
+                    Background="LightBlue"
+                    BorderThickness="0"
                     Grid.Column="1"
                     Grid.Row="1"
                     Click="ButtonClickEvent"/>
-            <Button x:Name="button6"
-                    Style="{StaticResource IngameButton}"
+            <Button x:Name="b6"
+                    Width="150"
+                    Height="150"
+                    Background="LightBlue"
+                    BorderThickness="0"
                     Grid.Column="2"
                     Grid.Row="1"
                     Click="ButtonClickEvent"/>
-            <Button x:Name="button7"
-                    Style="{StaticResource IngameButton}"
+            <Button x:Name="b7"
+                    Width="150"
+                    Height="150"
+                    Background="LightBlue"
+                    BorderThickness="0"
                     Grid.Column="0"
                     Grid.Row="2"
                     Click="ButtonClickEvent"/>
-            <Button x:Name="button8"
-                    Style="{StaticResource IngameButton}"
+            <Button x:Name="b8"
+                    Width="150"
+                    Height="150"
+                    Background="LightBlue"
+                    BorderThickness="0"
                     Grid.Column="1"
                     Grid.Row="2"
                     Click="ButtonClickEvent"/>
-            <Button x:Name="button9"
-                    Style="{StaticResource IngameButton}"
+            <Button x:Name="b9"
+                    Width="150"
+                    Height="150"
+                    Background="LightBlue"
+                    BorderThickness="0"
                     Grid.Column="2"
                     Grid.Row="2"
                     Click="ButtonClickEvent"/>
         </Grid>
         <Grid>
-            <Button Content="Start Game"
+            <Button x:Name="startButton"
+                    Content="Start Game"
                     Margin="10"
-                    Width="100"
+                    Width="150"
+                    Height="30"
                     Click="ButtonClickStartEvent"/>
         </Grid>
     </StackPanel>
