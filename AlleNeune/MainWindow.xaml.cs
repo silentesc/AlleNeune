@@ -97,12 +97,20 @@ namespace AlleNeune
          */
         private async void ButtonClickStartEvent(object sender, RoutedEventArgs e)
         {
+            // Get amount textbox
+            string amountTextBoxStr = amountTextBox.Text;
+            if (!int.TryParse(amountTextBoxStr, out int amount))
+            {
+                MessageBox.Show("Wrong amount");
+                return;
+            }
+
             // Disable start button
             startButton.IsEnabled = false;
             startButton.Content = "Game running...";
 
             // Start game
-            game = new Game(5);
+            game = new Game(amount);
 
             // Show numbers
             List<int> numbers = game.GetNumbers();
