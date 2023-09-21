@@ -7,6 +7,22 @@
         mc:Ignorable="d"
         Background="DimGray"
         Title="Alle Neune" Height="745" Width="650" ResizeMode="CanMinimize">
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}" x:Key="IngameButton">
+            <Setter Property="Background" Value="DarkGray"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}"
+                                CornerRadius="100"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True"/>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
     <StackPanel>
         <Grid Height="650">
             <!--Define Columns and Rows-->
@@ -61,74 +77,65 @@
 
             <!--Buttons (design in App.xaml)-->
             <Button x:Name="b1"
+                    Style="{StaticResource IngameButton}"
                     Width="150"
                     Height="150"
-                    Background="LightBlue"
-                    BorderThickness="0"
                     Grid.Column="0"
                     Grid.Row="0"
                     Click="ButtonClickEvent"/>
             <Button x:Name="b2"
+                    Style="{StaticResource IngameButton}"
                     Width="150"
                     Height="150"
-                    Background="LightBlue"
-                    BorderThickness="0"
                     Grid.Column="1"
                     Grid.Row="0"
                     Click="ButtonClickEvent"/>
             <Button x:Name="b3"
+                    Style="{StaticResource IngameButton}"
                     Width="150"
                     Height="150"
-                    Background="LightBlue"
-                    BorderThickness="0"
                     Grid.Column="2"
                     Grid.Row="0"
                     Click="ButtonClickEvent"/>
             <Button x:Name="b4"
+                    Style="{StaticResource IngameButton}"
                     Width="150"
                     Height="150"
-                    Background="LightBlue"
-                    BorderThickness="0"
                     Grid.Column="0"
                     Grid.Row="1"
                     Click="ButtonClickEvent"/>
             <Button x:Name="b5"
+                    Style="{StaticResource IngameButton}"
                     Width="150"
                     Height="150"
-                    Background="LightBlue"
-                    BorderThickness="0"
                     Grid.Column="1"
                     Grid.Row="1"
                     Click="ButtonClickEvent"/>
             <Button x:Name="b6"
+                    Style="{StaticResource IngameButton}"
                     Width="150"
                     Height="150"
-                    Background="LightBlue"
-                    BorderThickness="0"
                     Grid.Column="2"
                     Grid.Row="1"
                     Click="ButtonClickEvent"/>
             <Button x:Name="b7"
+                    Style="{StaticResource IngameButton}"
                     Width="150"
                     Height="150"
-                    Background="LightBlue"
-                    BorderThickness="0"
                     Grid.Column="0"
                     Grid.Row="2"
                     Click="ButtonClickEvent"/>
             <Button x:Name="b8"
+                    Style="{StaticResource IngameButton}"
                     Width="150"
                     Height="150"
-                    Background="LightBlue"
-                    BorderThickness="0"
                     Grid.Column="1"
                     Grid.Row="2"
                     Click="ButtonClickEvent"/>
             <Button x:Name="b9"
+                    Style="{StaticResource IngameButton}"
                     Width="150"
                     Height="150"
-                    Background="LightBlue"
-                    BorderThickness="0"
                     Grid.Column="2"
                     Grid.Row="2"
                     Click="ButtonClickEvent"/>
