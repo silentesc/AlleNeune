@@ -5,47 +5,126 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AlleNeune"
         mc:Ignorable="d"
-        Title="Alle Neune" Height="450" Width="450" ResizeMode="CanMinimize">
-    <Grid ShowGridLines="True">
-        <!--Define Columns and Rows-->
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        
-        <!--Buttons (design in App.xaml)-->
-        <Button x:Name="button1"
-                Grid.Column="0"
-                Grid.Row="0"/>
-        <Button x:Name="button2"
-                Grid.Column="1"
-                Grid.Row="0"/>
-        <Button x:Name="button3"
-                Grid.Column="2"
-                Grid.Row="0"/>
-        <Button x:Name="button4"
-                Grid.Column="0"
-                Grid.Row="1"/>
-        <Button x:Name="button5"
-                Grid.Column="1"
-                Grid.Row="1"/>
-        <Button x:Name="button6"
-                Grid.Column="2"
-                Grid.Row="1"/>
-        <Button x:Name="button7"
-                Grid.Column="0"
-                Grid.Row="2"/>
-        <Button x:Name="button8"
-                Grid.Column="1"
-                Grid.Row="2"/>
-        <Button x:Name="button9"
-                Grid.Column="2"
-                Grid.Row="2"/>
-    </Grid>
+        Title="Alle Neune" Height="525" Width="450" ResizeMode="CanMinimize">
+    <Window.Resources>
+        <!--Ingame buttons-->
+        <Style TargetType="Button" x:Key="IngameButton">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="100"
+                                Height="100"
+                                Background="SlateGray"
+                                CornerRadius="100"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <StackPanel>
+        <Grid Height="450">
+            <!--Define Columns and Rows-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <!--For grid lines-->
+            <Border BorderBrush="Black"
+                    BorderThickness="0 0 1 1"
+                    Grid.Column="0"
+                    Grid.Row="0"/>
+            <Border BorderBrush="Black"
+                    BorderThickness="1 0 1 1"
+                    Grid.Column="1"
+                    Grid.Row="0"/>
+            <Border BorderBrush="Black"
+                    BorderThickness="1 0 0 1"
+                    Grid.Column="2"
+                    Grid.Row="0"/>
+            <Border BorderBrush="Black"
+                    BorderThickness="0 1 1 1"
+                    Grid.Column="0"
+                    Grid.Row="1"/>
+            <Border BorderBrush="Black"
+                    BorderThickness="1 1 1 1"
+                    Grid.Column="1"
+                    Grid.Row="1"/>
+            <Border BorderBrush="Black"
+                    BorderThickness="1 1 0 1"
+                    Grid.Column="2"
+                    Grid.Row="1"/>
+            <Border BorderBrush="Black"
+                    BorderThickness="0 1 1 0"
+                    Grid.Column="0"
+                    Grid.Row="2"/>
+            <Border BorderBrush="Black"
+                    BorderThickness="1 1 1 0"
+                    Grid.Column="1"
+                    Grid.Row="2"/>
+            <Border BorderBrush="Black"
+                    BorderThickness="1 1 0 0"
+                    Grid.Column="2"
+                    Grid.Row="2"/>
+
+            <!--Buttons (design in App.xaml)-->
+            <Button x:Name="button1"
+                    Style="{StaticResource IngameButton}"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Click="ButtonClickEvent"/>
+            <Button x:Name="button2"
+                    Style="{StaticResource IngameButton}"
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    Click="ButtonClickEvent"/>
+            <Button x:Name="button3"
+                    Style="{StaticResource IngameButton}"
+                    Grid.Column="2"
+                    Grid.Row="0"
+                    Click="ButtonClickEvent"/>
+            <Button x:Name="button4"
+                    Style="{StaticResource IngameButton}"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Click="ButtonClickEvent"/>
+            <Button x:Name="button5"
+                    Style="{StaticResource IngameButton}"
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Click="ButtonClickEvent"/>
+            <Button x:Name="button6"
+                    Style="{StaticResource IngameButton}"
+                    Grid.Column="2"
+                    Grid.Row="1"
+                    Click="ButtonClickEvent"/>
+            <Button x:Name="button7"
+                    Style="{StaticResource IngameButton}"
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    Click="ButtonClickEvent"/>
+            <Button x:Name="button8"
+                    Style="{StaticResource IngameButton}"
+                    Grid.Column="1"
+                    Grid.Row="2"
+                    Click="ButtonClickEvent"/>
+            <Button x:Name="button9"
+                    Style="{StaticResource IngameButton}"
+                    Grid.Column="2"
+                    Grid.Row="2"
+                    Click="ButtonClickEvent"/>
+        </Grid>
+        <Grid>
+            <Button Content="Start Game"
+                    Margin="10"
+                    Width="100"
+                    Click="ButtonClickStartEvent"/>
+        </Grid>
+    </StackPanel>
 </Window>
