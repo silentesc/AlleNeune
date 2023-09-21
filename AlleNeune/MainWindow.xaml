@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:AlleNeune"
         mc:Ignorable="d"
         Background="DimGray"
-        Title="Alle Neune" Height="735" Width="650" ResizeMode="CanMinimize">
+        Title="Alle Neune" Height="745" Width="650" ResizeMode="CanMinimize">
     <StackPanel>
         <Grid Height="650">
             <!--Define Columns and Rows-->
@@ -133,13 +133,24 @@
                     Grid.Row="2"
                     Click="ButtonClickEvent"/>
         </Grid>
-        <Grid>
+        <Grid Margin="15">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
             <Button x:Name="startButton"
+                    Grid.Column="0"
                     Content="Start Game"
-                    Margin="10"
+                    FontSize="15"
                     Width="150"
                     Height="30"
                     Click="ButtonClickStartEvent"/>
+            <TextBox x:Name="amountTextBox"
+                     Grid.Column="1"
+                     Text="5"
+                     FontSize="20"
+                     Width="150"
+                     Height="30"/>
         </Grid>
     </StackPanel>
 </Window>
