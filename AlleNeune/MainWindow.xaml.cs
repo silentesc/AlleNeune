@@ -12,6 +12,9 @@ namespace AlleNeune
         private bool gameRunning;
         private readonly Button[] gameButtons;
 
+        private readonly SolidColorBrush defaultIngameButtonColor = Brushes.DarkGray;
+        private readonly SolidColorBrush activeIngameButtonColor = Brushes.DarkOrange;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -50,7 +53,7 @@ namespace AlleNeune
 
             foreach (Button button in gameButtons)
             {
-                button.Background = Brushes.LightBlue;
+                button.Background = defaultIngameButtonColor;
             }
 
             gameRunning = false;
@@ -76,17 +79,17 @@ namespace AlleNeune
             // Check for response
             if (response == -1)
             {
-                ((Button)sender).Background = Brushes.DarkOrange;
+                ((Button)sender).Background = activeIngameButtonColor;
                 MessageBox.Show("You lost :(");
                 GameEnd();
             }
             else if (response == 0)
             {
-                ((Button)sender).Background = Brushes.DarkOrange;
+                ((Button)sender).Background = activeIngameButtonColor;
             }
             else if (response == 1)
             {
-                ((Button)sender).Background = Brushes.DarkOrange;
+                ((Button)sender).Background = activeIngameButtonColor;
                 MessageBox.Show("You won :D");
                 GameEnd();
             }
@@ -117,12 +120,12 @@ namespace AlleNeune
             for (int i = 0; i < numbers.Count; i++)
             {
                 Button button = GetButtonByNumber(numbers[i]);
-                button.Background = Brushes.DarkOrange;
+                button.Background = activeIngameButtonColor;
                 await Task.Delay(1000);
             }
             foreach (Button button in gameButtons)
             {
-                button.Background = Brushes.LightBlue;
+                button.Background = defaultIngameButtonColor;
             }
 
             gameRunning = true;
